@@ -49,10 +49,10 @@ def takecommand():
     return query
 
 def sendEmail(to,content):
-    server = smtplib.SMTP('smtp.gmail.com',587)
+    server = smtplib.SMTP('smtp.gmail.com',587)  #port==587
     server.ehlo()
     server.starttls()
-    server.login("yourmail@gmail.com","abc")
+    server.login("yourmail@gmail.com","abc")  #here abc==password
     server.sendmail("yourmail@gmail.com",to,content)
     server.close()
 
